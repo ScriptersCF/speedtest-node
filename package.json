@@ -1,0 +1,9 @@
+{
+    "name": "speedtest-node",
+    "dependencies": {
+        "download": "^7.1.0"
+    },
+    "scripts": {
+        "start": "node main.js"
+    }
+}
