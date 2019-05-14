@@ -1,15 +1,13 @@
-
 const download = require('download');
 const fs = require('fs');
 // 1MB = 8Mb
 const size = 100 * 8;
 let interval = 1000 * 3600;
 
-
-setInterval(async() => {
+const main = async () => {
     let start = Date.now();
     let d = new Date();
-    console.log('-----------------');
+    console.log('----------------');
     console.log('Started download');
     const href = 'https://speed.hetzner.de/100MB.bin';
     const filePath = './';
@@ -24,5 +22,7 @@ setInterval(async() => {
     console.log(`Measured speed: ${mbps} Mbps`);
     console.log(`Time in seconds: ${Math.round(end / 1000)} s`);
     fs.unlinkSync(`${filePath}/100MB.bin`);
-}, interval);
-
+    console.log('\nWaiting for next download test...')
+};
+main();
+setInterval(main, interval);
