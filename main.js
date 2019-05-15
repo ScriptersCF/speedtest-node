@@ -12,7 +12,6 @@ function stopInterval() {
 };
 
 const main = async () => {
-    
     let start = Date.now();
     let d = new Date();
     const href = 'https://speed.hetzner.de/100MB.bin';
