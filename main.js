@@ -1,5 +1,6 @@
 const download = require('download');
 const fs = require('fs');
+const configurations = require('./configurations.json');
 // 1MB = 8Mb
 const size = 100 * 8;
 let interval = 1000 * 3600;
@@ -13,6 +14,7 @@ const main = async () => {
     
     let start = Date.now();
     let d = new Date();
+    let logPath = configurations.logPath
     console.log('----------------');
     console.log('Started download');
     const href = 'https://speed.hetzner.de/100MB.bin';
@@ -20,7 +22,7 @@ const main = async () => {
     await download(href, filePath); // Download the 100MB.bin file
     let end = Date.now() - start;
     let mbps = Math.round(size / (end / 1000))
-    await fs.appendFile(`./log/${d.getDate()}-${d.getMonth() + 1}-${d.getFullYear()}.txt`, `[${d}] ${mbps} Mbps\n`, (err) => { // Append to log file, create one if there's none matching the current date.
+    await fs.appendFile(`${logPath}/${d.getDate()}-${d.getMonth() + 1}-${d.getFullYear()}.txt`, `[${d}] ${mbps} Mbps\n`, (err) => { // Append to log file, create one if there's none matching the current date.
         if (err) throw err;
     });
     console.clear();
