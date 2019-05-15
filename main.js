@@ -8,7 +8,7 @@ let interval = 1000 * 3600;
 const main = async () => {
     function stopInterval() {
         clearInterval(loop); // Stops the loop
-        interval = Math.floor((Math.random() * 3601) + 1) * 1000; // Generates a random number between 3600 and 1
+        interval = Math.floor((Math.random() * 3601) + 1800) * 1000; // Generates a interval between 1 hour and 30 minutes
         loop = setInterval(main, interval); // Sets the loop to run with the newly generated interval
     }
     
