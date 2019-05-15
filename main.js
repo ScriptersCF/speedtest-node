@@ -10,14 +10,14 @@ const main = async () => {
         clearInterval(loop); // Stops the loop
         interval = Math.floor((Math.random() * 3601) + 1800) * 1000; // Generates a interval between 1 hour and 30 minutes
         loop = setInterval(main, interval); // Sets the loop to run with the newly generated interval
-    }
+    };
     
     let start = Date.now();
     let d = new Date();
-    console.log('----------------');
-    console.log('Started download');
     const href = 'https://speed.hetzner.de/100MB.bin';
     const filePath = './';
+    console.log('----------------');
+    console.log('Started download');
     await download(href, filePath); // Download the 100MB.bin file
     let end = Date.now() - start;
     let mbps = Math.round(size / (end / 1000))
