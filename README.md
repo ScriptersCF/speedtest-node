@@ -1,5 +1,5 @@
 # speedtest-node
-A simple, easy to use SpeedTest program with additional logging. Based on NodeJS
+A simple, easy to use SpeedTest program with additional logging primarily developed by `aisoposJS` and `tipakA`. Based on NodeJS
 
 ### Instructions
 
