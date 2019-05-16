@@ -7,7 +7,7 @@ let interval = 1000 * 3600;
 
 function stopInterval() {
     clearInterval(loop); // Stops the loop
-    interval = Math.floor((Math.random() * 3601) + 1800) * 1000; // Generates a interval between 1 hour and 30 minutes
+    interval = Math.floor((Math.random() * 3601) + 1800) * 1000; // Generates an interval between 1 hour and 30 minutes
     loop = setInterval(main, interval); // Sets the loop to run with the newly generated interval
 };
 
