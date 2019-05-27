@@ -5,10 +5,9 @@ const config = require('./configurations.json');
 const size = 100 * 8;
 let interval = 1000 * 3600;
 
-function stopInterval() {
-    clearInterval(loop); // Stops the loop
+function resetTimeout() {
     interval = Math.floor((Math.random() * 1801) + 1800) * 1000; // Generates an interval between 1 hour and 30 minutes
-    loop = setInterval(main, interval); // Sets the loop to run with the newly generated interval
+    setTimeout(main, interval); // Sets the loop to run with the newly generated interval
 };
 
 const main = async () => {
@@ -30,7 +29,7 @@ const main = async () => {
     console.log(`Time in seconds: ${Math.round(end / 1000)} s`);
     unlinkSync(`${filePath}/100MB.bin`); // Delete the downloaded file
     console.log('\nWaiting for next download test...');
-    stopInterval();
+    resetTimeout();
 };
 main();
-let loop = setInterval(main, interval);
+setTimeout(main, interval);
