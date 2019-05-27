@@ -17,7 +17,7 @@ const main = async () => {
     const filePath = './';
     console.log('----------------');
     console.log(`Downloading ${href}`);
-    await download(href, filePath); // Download the 100MB.bin file
+    await download(href); // Download the 100MB file, but don't save it
     let end = Date.now() - start;
     let mbps = Math.round(size / (end / 1000))
     await appendFile(`${config.logPath}/${d.getDate()}-${d.getMonth() + 1}-${d.getFullYear()}.txt`, `[${d}] ${mbps} Mbps\n`, (err) => { // Append to log file, create one if there's none matching the current date.
@@ -27,7 +27,6 @@ const main = async () => {
     console.log('Finished download');
     console.log(`Measured speed: ${mbps} Mbps`);
     console.log(`Time in seconds: ${Math.round(end / 1000)} s`);
-    unlinkSync(`${filePath}/100MB.bin`); // Delete the downloaded file
     console.log('\nWaiting for next download test...');
     resetTimeout();
 };
