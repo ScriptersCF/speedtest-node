@@ -1,3 +1,4 @@
 {
-  "logPath": "./log"
+  "logPath": "./log",
+  "href": "http://speedtest.tele2.net/100MB.zip"
 }
