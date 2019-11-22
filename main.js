@@ -11,11 +11,11 @@ function resetTimeout() {
         href = config.decent_href;
         
         if (mbps >= 30) {
-            href = config.fast_href
+            href = config.fast_href;
         }
 
         if (mbps >= 100) {
-            href = config.superfast_href
+            href = config.superfast_href;
         }
     }
     setTimeout(main, interval); // Sets the loop to run with the newly generated interval
