@@ -1,4 +1,7 @@
 {
   "logPath": "./log",
-  "href": "http://speedtest.tele2.net/100MB.zip"
+  "default_href": "http://speedtest.tele2.net/1MB.zip",
+  "decent_href": "http://speedtest.tele2.net/10MB.zip",
+  "fast_href": "http://speedtest.tele2.net/100MB.zip",
+  "superfast_href": "http://speedtest.tele2.net/1GB.zip"
 }
