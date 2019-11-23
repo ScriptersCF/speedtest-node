@@ -7,14 +7,14 @@ let first_test = true;
 
 let mbps;
 function resetTimeout() {
-    interval =  Math.floor((Math.random() * 1801) + 1800) * 1000; // Generates an interval between 1 hour and 30 minutes
+    interval = Math.floor(Math.random() * 1801 + 1800) * 1000; // Generates an interval between 1 hour and 30 minutes
     if (first_test === true) {
         first_test = false;
         interval = 5000;
     }
     if (mbps >= 10) {
         href = config.decent_href;
-        
+
         if (mbps >= 30) {
             href = config.fast_href;
         }
@@ -24,7 +24,7 @@ function resetTimeout() {
         }
     }
     setTimeout(main, interval); // Sets the loop to run with the newly generated interval
-};
+}
 
 const main = async () => {
     let size = parseInt(href.toString().slice(27, href.toString().length - 6)) * 8;
