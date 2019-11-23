@@ -1,5 +1,6 @@
 {
     "name": "speedtest-node",
+    "version": "2.1.1",
     "main": "main.js",
     "dependencies": {
         "download": "^7.1.0"
