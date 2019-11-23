@@ -37,7 +37,7 @@ const main = async () => {
     await download(href); // Download the file, but don't save it
     const end = Date.now() - d;
     mbps = size / (end / 1000);
-    appendFile(`${config.logPath}/${d.getDate()}-${d.getMonth() + 1}-${d.getFullYear()}.txt`, `[${d}] ${mbps} Mbps\n`, (err) => { // Append to log file, create one if there's none matching the current date.
+    appendFile(`${config.logPath}/${d.getDate()}-${d.getMonth() + 1}-${d.getFullYear()}.txt`, `[${d}] ${mbps.toFixed(2)} Mbps\n`, (err) => { // Append to log file, create one if there's none matching the current date.
         if (err) throw err;
     });
     console.clear();
