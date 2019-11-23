@@ -1,4 +1,4 @@
-# speedtest-node V2.1.0
+# speedtest-node v2
 A simple, easy to use SpeedTest program with additional logging primarily developed by `aisoposJS` and `tipakA`. Based on NodeJS
 
 ## What's new?
