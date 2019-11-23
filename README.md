@@ -2,7 +2,9 @@
 A simple, easy to use SpeedTest program with additional logging primarily developed by `aisoposJS` and `tipakA`. Based on NodeJS
 
 ## What's new?
-More download files, program automatically decides which file to use for most accurate results.
+- More download files, time for more accurate results. Entirely automated!!
+- Fixed the issue with 1GB file being recognized as a 1MB file.
+- `tipakA` chose to complain about `==`, so we're using `===` now.
 
 ### Instructions
 
