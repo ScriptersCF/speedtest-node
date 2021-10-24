@@ -4,7 +4,6 @@ A simple, easy to use SpeedTest program with additional logging primarily develo
 ## What's new?
 - More download files, time for more accurate results. Entirely automated!!
 - Fixed the issue with 1GB file being recognized as a 1MB file.
-- `tipakA` chose to complain about `==`, so we're using `===` now.
 
 ### Instructions
 
