@@ -3,7 +3,7 @@
     "version": "2.1.1",
     "main": "main.js",
     "dependencies": {
-        "download": "^7.1.0"
+        "download": "^8.0.0"
     },
     "scripts": {
         "start": "node main.js"
